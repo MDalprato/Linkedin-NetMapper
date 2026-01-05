@@ -1,20 +1,45 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# LinkedIn NetMapper
 
-# Run and deploy your AI Studio app
+Mappa le tue connessioni LinkedIn per azienda, esplora il tuo network con una vista ad albero e genera insight con Gemini.
 
-This contains everything you need to run your app locally.
+## Funzionalita
 
-View your app in AI Studio: https://ai.studio/apps/drive/1IH5CMFv3sbS7zzKuz4h92AHeev4W3KEm
+- Importa `Connections.csv` e crea un albero interattivo delle aziende.
+- Dashboard con totale connessioni e top aziende.
+- Dettaglio nodo con ruolo, azienda, data di connessione e link al profilo.
+- Insight AI su focus di settore, opportunita e strategie di networking.
 
-## Run Locally
+## Come ottenere Connections.csv
 
-**Prerequisites:**  Node.js
+1. Vai su https://www.linkedin.com/psettings/member-data
+2. Seleziona "Get a copy of your data" e spunta "Connections".
+3. Richiedi l'archivio e scarica il file quando pronto.
 
+## Avvio locale
 
-1. Install dependencies:
+**Prerequisiti:** Node.js
+
+1. Installa le dipendenze:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Crea `.env.local` con la tua chiave Gemini:
+   `GEMINI_API_KEY=your_key_here`
+3. Avvia il progetto:
    `npm run dev`
+4. Apri `http://localhost:3000`
+
+## Script utili
+
+- `npm run dev` avvia il server di sviluppo
+- `npm run build` crea la build di produzione
+- `npm run preview` avvia l'anteprima della build
+
+## Note su privacy e dati
+
+- Il file CSV viene elaborato localmente nel browser e non viene salvato.
+- Se usi "Generate AI Insights", vengono inviati a Gemini: top aziende, un campione di ruoli e il totale connessioni.
+- Puoi usare l'app anche senza chiave API se non ti servono gli insight AI.
+
+## Limitazioni note
+
+- L'albero mostra le prime 50 aziende per performance.
+- Il prompt AI usa un campione iniziale di 50 connessioni.
