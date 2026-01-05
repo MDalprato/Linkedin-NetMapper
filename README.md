@@ -21,11 +21,9 @@ Mappa le tue connessioni LinkedIn per azienda, esplora il tuo network con una vi
 
 1. Installa le dipendenze:
    `npm install`
-2. Crea `.env.local` con la tua chiave Gemini:
-   `GEMINI_API_KEY=your_key_here`
-3. Avvia il progetto:
+1. Avvia il progetto:
    `npm run dev`
-4. Apri `http://localhost:3000`
+2. Apri `http://localhost:3000`
 
 ## Script utili
 
